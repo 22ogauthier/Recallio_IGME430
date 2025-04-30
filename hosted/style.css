@@ -1,0 +1,513 @@
+:root {
+    /* Brand Colors - Flashcard Fresh */
+    --purple-primary: #7c4dff;
+    /* Primary action color */
+    --purple-soft: #b388ff;
+    /* Hover / secondary purple */
+    --purple-deep: #4527a0;
+    /* Deep text for strong contrast */
+
+    --green-success: #81c784;
+    /* Correct answer background */
+    --green-accent: #dcedc8;
+
+    --error: #ffcccb;
+    /* Soft red for incorrect answers */
+
+    /* Neutrals */
+    --gray-bg: #fafafa;
+    /* Light, neutral background */
+    --gray-card: #ffffff;
+    /* Card background */
+    --gray-border: #e0e0e0;
+    /* Card outlines */
+    --gray-muted: #8e8e8e;
+    /* Muted/subtext */
+    --gray-disabled: #c2c2c2;
+    /* Disabled border and text */
+
+    /* Text */
+    --text-primary: #212121;
+    /* Primary dark text */
+    --text-secondary: #757575;
+    /* Secondary muted text */
+    --text-on-dark: #ffffff;
+    /* Text on dark backgrounds */
+}
+
+html,
+body {
+    height: auto;
+    overflow: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+#makerPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 50px;
+}
+
+/*LOGIN WINDOW*/
+.modal {
+    display: inline-block;
+    background: var(--gray-card);
+    width: 400px;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 70px;
+}
+
+.flashcardError {
+    position: fixed;
+    left: 130px;
+}
+
+.flashcard-modal {
+    width: 400px;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 70px;
+    background: var(--gray-card);
+}
+
+.big-logo {
+    width: 50%;
+    height: auto;
+}
+
+#usersFlashcardsTitle {
+    font-family: 'Segoe UI', bold;
+    font-size: 45px;
+}
+
+.loginTitle {
+    font-family: 'Segoe UI', bold;
+    font-size: 35px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.flashcardTitle {
+    font-family: 'Segoe UI', bold;
+    font-size: 35px;
+    padding-top: 1rem;
+}
+
+.mainForm {
+    display: inline-block;
+    align-items: center;
+    height: 200px;
+    width: 350px;
+}
+
+.text_area {
+    align-content: center;
+    border-radius: 22px;
+    margin-bottom: 35px;
+    width: 100%;
+    height: 64px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.text_input {
+    font-family: 'Montserrat regular';
+    margin-top: 1rem;
+    font-size: 20px;
+    border: none;
+    width: 80%;
+}
+
+.formSubmit {
+    transition: background-color 0.4s ease;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 14px;
+    font-size: 1.2em;
+    width: 200px;
+    height: 50px;
+    background-color: var(--purple-primary);
+    border-radius: 20px;
+    border-color: var(--purple-soft);
+    padding: 3px 0px;
+    color: var(--text-on-dark);
+    text-decoration: none;
+}
+
+.formSubmit:link,
+.formSubmit:visited,
+.formSubmit:hover,
+.formSubmit:active {
+    color: var(--text-on-dark);
+}
+
+.formSubmit:hover {
+    transition: background-color 0.4s ease;
+    background-color: var(--purple-deep);
+}
+
+#stats-content p {
+    text-align: left;
+    font-family: 'Segoe UI';
+    font-size: 20px;
+    padding: 0rem 2rem;
+}
+
+h5 {
+    text-align: left;
+    font-family: 'Segoe UI', 'Bold';
+    font-size: 25px;
+    padding: 0rem 2rem;
+}
+
+.go-back-button {
+    transition: background-color 0.4s ease;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 14px;
+    font-size: 1.2em;
+    width: 200px;
+    height: 50px;
+    background-color: var(--purple-primary);
+    border-radius: 20px;
+    border-color: var(--purple-soft);
+    padding: 3px 0px;
+    color: var(--text-on-dark);
+    text-decoration: none;
+}
+
+.go-back-button:visited {
+    color: var(--text-on-dark);
+}
+
+
+/*NAV BAR*/
+#logo {
+    height: 40px;
+    width: 40;
+    padding-top: 5px;
+    float: left;
+    border-radius: 8px;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: var(--purple-primary);
+}
+
+nav:nth-child(1) {
+    padding-left: 25px;
+}
+
+.navlink {
+    padding: 5px;
+    padding-top: 12px;
+    padding-left: 20px;
+    color: white;
+    font-size: 1.3em;
+    float: left;
+}
+
+.navlink a,
+.navlink a:link,
+.navlink a:visited,
+.navlink a:hover,
+.navlink a:active {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: var(--purple-primary);
+    transition: background-color 0.4s ease;
+}
+
+.navlink a:hover {
+    transition: background-color 0.8s ease;
+    background-color: var(--purple-soft);
+}
+
+.flashcardForm {
+    border: 2px solid #338acc;
+    height: 35px;
+    width: 700px;
+    margin-top: 0px;
+    padding-top: 10px;
+    background-color: #55acee;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.flashcardForm label {
+    display: inline-block;
+    width: 75px;
+    margin-left: 10px;
+    font-size: 1.2em;
+    float: left;
+    color: white;
+}
+
+.flashcardForm input[type=text] {
+    float: left;
+}
+
+.makeFlashcardSubmit {
+    transition: background-color 0.4s ease;
+    display: inline;
+    width: 90px;
+    background-color: #55acee;
+    border-radius: 2px;
+    color: white;
+    text-decoration: none;
+}
+
+.makeFlashcardSubmit:link,
+.makeFlashcardSubmit:visited,
+.makeFlashcardSubmit:hover,
+.makeFlashcardSubmit:active {
+    color: white;
+}
+
+.makeFlashcardSubmit:hover {
+    transition: background-color 0.4s ease;
+    background-color: #338acc;
+}
+
+#user,
+#pass,
+#pass2 {
+    text-align: center;
+    font-size: 1.1em;
+    width: 180px;
+    border-radius: 6px;
+}
+
+#user:focus,
+#pass:focus,
+#pass2:focus {
+    outline: none;
+    box-shadow: 0px 0px 1px 1px #55acee;
+}
+
+.hidden {
+    display: none;
+}
+
+/*ERROR MESSAGING*/
+#flashcardMessage {
+    top: 60px;
+    width: 250px;
+    height: 35px;
+    position: absolute;
+    text-align: center;
+    z-index: 200;
+    right: 600px;
+    background-color: var(--error);
+}
+
+
+#flashcardMessage h3 {
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+
+#errorMessage {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000000;
+    font-style: italic;
+}
+
+#flashcards {
+    width: auto;
+    min-width: 400px;
+    height: 70vh; 
+    overflow-y: auto;
+    border: 2px solid var(--purple-soft);
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 1rem;
+    background-color: var(--purple-primary); 
+}
+
+.flashcard {
+    width: 450px;
+    height: 250px;
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+    background-color: var(--gray-card);
+    margin: 2rem;
+    font-family: 'Segoe UI', bold;
+}
+
+.flashcard.flipped {
+    transform: rotateY(180deg);
+}
+
+.flashcard .front,
+.flashcard .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+.deleteButton {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+}
+
+.deleteButton img {
+    width: 24px;
+    height: 24px;
+}
+
+.flashcard .back {
+    transform: rotateY(180deg);
+}
+
+.flashcard:hover {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+    /* transition: border-color 0.2s ease-out;
+    border-color: rgba(255, 255, 255, 0.8);
+    transition: background-color 2.6s ease-out;
+    background-color: #66bfff; */
+}
+
+img.domoFace {
+    margin-left: 25px;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 4px;
+    margin-top: 10px;
+    float: left;
+}
+
+h3.emptyFlashcard {
+    width: 400px;
+    font-size: 1.5em;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 18px;
+}
+
+h3.flashcardFront {
+    width: 90%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 20px;
+    margin: 20px;
+    text-wrap: pretty;
+}
+
+h3.flashcardBack {
+    width: 90%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 20px;
+    margin: 20px;
+    text-wrap: pretty;
+}
+
+.flashcard:first-child {
+    margin-top: 10px;
+}
+
+.flashcard:last-child {
+    margin-bottom: 10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--gray-disabled);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--purple-primary);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--purple-primary);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
