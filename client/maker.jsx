@@ -27,7 +27,9 @@ const FlashcardForm = (props) => {
                 <h4 className="flashcardTitle">Add a Flashcard</h4>
                 <form id="flashcardForm"
                     name="flashcardForm"
-                    onSubmit={(e) => handleFlashcard(e, props.triggerReload)}
+                    onSubmit={(e) => {
+                        handleFlashcard(e, props.triggerReload);
+                        document.getElementsById("text-area").reset();}}
                     action="/maker"
                     method="POST"
                     className="mainForm"
